@@ -18,6 +18,14 @@
                         <textarea name="content" rows="8" cols="80" placeholder="Inserisci il content" class="form-control"></textarea>
                     </div>
                     <div class="form-group">
+                        <label for="category_id">Categoria</label>
+                        <select class="form-control" name="category_id">
+                            @foreach ($categories as $category)
+                                <option value="{{ $category->id }}">{{ $category->title }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                    <div class="form-group">
                         <input type="submit" value="Salva Nuovo" class="btn btn-success">
                     </div>
                 </form>

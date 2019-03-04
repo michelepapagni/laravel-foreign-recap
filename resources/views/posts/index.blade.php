@@ -13,6 +13,7 @@
                     <thead>
                         <tr>
                             <th>Id</th>
+                            <th>Nome Categoria</th>
                             <th>Slug</th>
                             <th>Title</th>
                         </tr>
@@ -21,6 +22,7 @@
                         @foreach ($posts as $post)
                             <tr>
                                 <td>{{ $post->id }}</td>
+                                <td>{{ $post->category->title }}</td>
                                 <td>{{ $post->slug }}</td>
                                 <td>{{ $post->title }}</td>
                             </tr>
