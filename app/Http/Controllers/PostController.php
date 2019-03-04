@@ -62,7 +62,11 @@ class PostController extends Controller
      */
     public function show($id)
     {
-        //
+        $post = Post::find($id);
+
+        if (empty($post)) abort(404);
+
+        return view('posts.show', compact('post'));
     }
 
     /**

@@ -16,6 +16,7 @@
                             <th>Nome Categoria</th>
                             <th>Slug</th>
                             <th>Title</th>
+                            <th>Visualizza</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -25,6 +26,11 @@
                                 <td>{{ $post->category->title }}</td>
                                 <td>{{ $post->slug }}</td>
                                 <td>{{ $post->title }}</td>
+                                <td>
+                                    <a href="{{ route('posts.show', $post->id) }}" class="btn btn-success">
+                                        Visualizza
+                                    </a>
+                                </td>
                             </tr>
                         @endforeach
                     </tbody>
